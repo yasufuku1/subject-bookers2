@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :books, only:[:new,:show,:index]
+  resources :books
   #get 'users/show'
   #get 'users/edit'
   #get 'books/new'
