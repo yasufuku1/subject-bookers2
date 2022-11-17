@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_one_attached :profile_image
 
   validates :name,
+    uniqueness: { message: 'Name has already been taken' },
     length: { minimum: 2, maximum: 20 }
 
   validates :introduction,
