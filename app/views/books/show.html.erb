@@ -6,6 +6,10 @@
 
       <%= render 'users/user_profile', user: @user %>
 
+      <%= link_to edit_user_path(@user), class:"btn btn-outline-secondary btn-block" do %>
+        <i class="fas fa-user-cog"></i>
+      <% end %>
+
       </div>
       <%= render 'new_book', book_new: @book_new %>
 
@@ -17,7 +21,7 @@
           <tr>
             <td>
               <%= link_to user_path(@user) do %>
-              <%= image_tag @user.get_profile_image(100, 100) %><br>
+              <%= image_tag @user.get_profile_image(100,100) %><br>
               <%= @user.name %>
               <% end %>
             </td>
